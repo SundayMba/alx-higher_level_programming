@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    size = len(sys.argv)
+    size = len(argv)
     if size == 1:
         print("0 arguments.")
     else:
-        print("{} arguments:".format(size - 1))
+        if size == 2:
+            print("{} argument:".format(size - 1))
+        else:
+            print("{} arguments:".format(size - 1))
         size = 0
-        for item in sys.argv:
+        for item in argv:
             if size != 0:
-                print("{}: {}".format(size, sys.argv[size]))
+                print("{}: {}".format(size, argv[size]))
             size += 1
