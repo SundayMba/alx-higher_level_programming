@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import hidden_4.pyc as sys
+import hidden_4 as sys
 
 if __name__ == "__main__":
     items = dir(sys)
