@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-from magic_calculation_102 import add, sub
-
 if __name__ == '__main__':
     def magic_calcultion(a, b):
         from magic_calculation_102 import add, sub
