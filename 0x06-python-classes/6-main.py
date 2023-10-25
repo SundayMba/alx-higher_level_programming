@@ -8,6 +8,9 @@ print("--")
 
 my_square_2 = Square(3, (1, 1))
 my_square_2.my_print()
+print(my_square_2.size)
+print(my_square_2.area())
+print(my_square_2.position)
 
 print("--")
 
