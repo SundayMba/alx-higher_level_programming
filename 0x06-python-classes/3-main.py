@@ -4,6 +4,9 @@ Square = __import__('3-square').Square
 my_square_1 = Square(3)
 print("Area: {}".format(my_square_1.area()))
 
+my_square_1.size = 4
+print("Area: {} size: {}".format(my_square_1.area(), my_square_1.size))
+
 try:
     print(my_square_1.size)
 except Exception as e:
