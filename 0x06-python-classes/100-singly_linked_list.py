@@ -7,8 +7,13 @@ class Node:
     """ Class that models a Node object """
     def __init__(self, data, next_node=None):
         """ constructor for Node instance """
+        if not isinstance(data, int):
+            raise TypeError("data must be an integer")
+        if next_node is None or isinstance(next_node, Node):
+            self.__next_node = next_node
+        else:
+            raise TypeError("next_node must be a Node")
         self.__data = data
-        self.__next_node = next_node
 
     @property
     def data(self):
