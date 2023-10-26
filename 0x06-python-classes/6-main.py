@@ -19,3 +19,5 @@ my_square_3.my_print()
 
 print("--")
 
+print(my_square_1.__dict__)
+
