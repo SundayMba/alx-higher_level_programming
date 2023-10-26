@@ -98,7 +98,7 @@ class Square:
         """ user friendly message rep. of the class square """
         user = []
         if self.__size == 0:
-            user.append("\n")
+            user.append("")
         else:
             for y_pos in range(self.__position[1]):
                 user.append("\n")
