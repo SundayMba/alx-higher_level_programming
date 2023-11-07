@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
+bg = __import__('7-base_geometry').BaseGeometry
 """
     a module that contains a public instance method
 """
 
 
-class Rectangle:
+class Rectangle(bg):
     """ Base geometry class with only one method  """
     def __init__(self, width, height):
         """constructor"""
