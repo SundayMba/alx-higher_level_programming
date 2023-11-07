@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
-bg = __import__('7-base_geometry').BaseGeometry
 """
     a module that contains a public instance method
 """
+
+
+bg = __import__('7-base_geometry').BaseGeometry
+""" importation of Base Geometry class """
 
 
 class Rectangle(bg):
