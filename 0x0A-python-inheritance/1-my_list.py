@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+class the inherits from the list class
+"""
+
+
 class MyList(list):
     """
         a class that extends the functionality of the lst class
