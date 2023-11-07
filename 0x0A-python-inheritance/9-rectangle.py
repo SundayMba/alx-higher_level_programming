@@ -13,8 +13,8 @@ class Rectangle(bg):
     """ Base geometry class with only one method  """
     def __init__(self, width, height):
         """constructor"""
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        self.integer_validator(width, width)
+        self.integer_validator(height, height)
         self.__height = height
         self.__width = width
 
