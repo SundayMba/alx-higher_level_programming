@@ -8,6 +8,7 @@
 class BaseGeometry(object):
     """ Base geometry class with only one method  """
     def area(self):
+        """ area function """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
