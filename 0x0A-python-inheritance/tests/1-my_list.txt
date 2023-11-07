@@ -1,0 +1,18 @@
+>>> MyList = __import__('1-my_list').MyList
+>>> nums = MyList([1, 2, 3, 9, 0, 8])
+>>> num.print_sorted()
+Traceback (most recent call last):
+  ...
+NameError: name 'num' is not defined
+>>> nums.print_sorted()
+[0, 1, 2, 3, 8, 9]
+>>> print(nums)
+[1, 2, 3, 9, 0, 8]
+>>> nums.append(-2)
+>>> nums.append(-1)
+>>> print(nums)
+[1, 2, 3, 9, 0, 8, -2, -1]
+>>> nums.print_sorted()
+[-2, -1, 0, 1, 2, 3, 8, 9]
+>>> print(nums)
+[1, 2, 3, 9, 0, 8, -2, -1]
