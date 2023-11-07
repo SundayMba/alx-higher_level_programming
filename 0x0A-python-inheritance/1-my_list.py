@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 class MyList(list):
     """
         a class that extends the functionality of the lst class
