@@ -16,3 +16,6 @@ NameError: name 'num' is not defined
 [-2, -1, 0, 1, 2, 3, 8, 9]
 >>> print(nums)
 [1, 2, 3, 9, 0, 8, -2, -1]
+>>> new_list = MyList()
+>>> new_list.print_sorted()
+[]
