@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Subclass module for Base implementing Rectangle """
-
 from models.base import Base
+
 
 class Rectangle(Base):
     """ Subclass for Base """
