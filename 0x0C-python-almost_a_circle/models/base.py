@@ -27,7 +27,7 @@ class Base:
         if list_dictionaries is None:
             return '"[]"'
         if list_dictionaries == []:
-            return '\"[]\"'
+            return "\"[]\""
         return str(list_dictionaries).replace("'", '"')
 
     @classmethod
