@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 
 """ Base module """
 
@@ -24,12 +23,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ convert from list of dictionaries to json string """
         if list_dictionaries is None:
             return '"[]"'
         return str(list_dictionaries).replace("'", '"')
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ save a list of objects to a file """
         if list_objs is None:
             json_list = "[]"
             file_name = f"{cls.__name__}.json"
@@ -44,6 +45,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """ from json string to dictionary """
+        import json
         if json_string is None or json_string == '':
             return []
         return json.loads(json_string)
