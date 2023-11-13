@@ -24,7 +24,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ convert from list of dictionaries to json string """
-        if list_dictionaries == [] or list_dictionaries is None:
+        if list_dictionaries == []:
             return '"[]"'
         return str(list_dictionaries).replace("'", '"')
 
