@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """ module that models a square class """
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -10,6 +10,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ string representation of the Square object """
         c = "[Square]"
         s = f"{c} ({self.id}) {self.x}/{self.y} - {self.width}"
         return s
