@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import json
-import models.rectangle
 
 """ Base module """
 
