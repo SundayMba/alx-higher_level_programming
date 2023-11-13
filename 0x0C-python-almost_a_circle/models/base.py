@@ -26,6 +26,8 @@ class Base:
         """ convert from list of dictionaries to json string """
         if list_dictionaries is None:
             return '"[]"'
+        if list_dictionaries == []:
+            return '\"[]\"'
         return str(list_dictionaries).replace("'", '"')
 
     @classmethod
