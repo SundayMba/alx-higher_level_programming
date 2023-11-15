@@ -55,9 +55,10 @@ class Base:
         """ dictionary to instance converter """
         if cls.__name__.lower() == "square":
             from models.square import Square as obj
+            dummy = obj(3)
         else:
             from models.rectangle import Rectangle as obj
-        dummy = obj(3)
+            dummy = obj(3, 4)
         """ it is received as a dictionary, it must be unbound back to
             key/value pair before given to update with the real values
         """
