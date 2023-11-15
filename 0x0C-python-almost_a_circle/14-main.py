@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-""" 14-main """
+""" Check """
 from models.base import Base
-from models.rectangle import Rectangle
 
-if __name__ == "__main__":
+list_dictionaries = None
+rjson = Base.to_json_string(list_dictionaries)
+rjson_expected = "[]"
 
-    r1 = Rectangle(10, 7, 2, 8)
-    dictionary = r1.to_dictionary()
-    json_dictionary = Base.to_json_string([])
-    print(dictionary)
-    print(type(dictionary))
-    print(json_dictionary)
-    print(type(json_dictionary))
+if rjson is None:
+    print("to_json_string is not returning a string")
+    exit(1)
 
+print("return: {} expected: {}".format(rjson, rjson_expected))
+if rjson != rjson_expected:
+    print("to_json_string on {} must return {}: {}".format(list_dictionaries, rjson_expected, rjson))
+    exit(1)
+
+print("OK", end="")
