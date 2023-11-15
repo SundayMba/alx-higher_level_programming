@@ -57,7 +57,7 @@ class Base:
             from models.square import Square as obj
         else:
             from models.rectangle import Rectangle as obj
-        dummy = obj(3, 4)
+        dummy = obj(3)
         """ it is received as a dictionary, it must be unbound back to
             key/value pair before given to update with the real values
         """
