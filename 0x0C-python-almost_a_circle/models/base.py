@@ -112,9 +112,9 @@ class Base:
                 data = file.read()
                 n = ' '.join(data.split(',')).rstrip().split(' ')
                 if cls.__name__ == "Square":
-                    len_s = len(n) / 4
+                    len_s = len(n) // 4
                     s = {}
-                    while len_s:
+                    while len_s > 0:
                         s['id'] = int(n[index])
                         s['size'] = int(n[index+1])
                         s['x'] = int(n[index+2])
@@ -137,4 +137,4 @@ class Base:
                     len_s -= 1
                 return list_s
         except Exception as e:
-            return []
+            return ''
