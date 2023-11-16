@@ -82,3 +82,59 @@ class Base:
                 return list_instance
         except Exception:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ save the object formatted data to the file in csv format"""
+        filename = f'{cls.__name__}.csv'
+        data = ''
+        if list_objs is None:
+            data = ''
+        else:
+            if cls.__name__ == 'Square':
+                for obj in list_objs:
+                    data += f'{obj.id},{obj.width},{obj.x},{obj.y},'
+            else:
+                for ob in list_objs:
+                    data += f"{ob.id},{ob.width},{ob.height},{ob.x},{ob.y},"
+            data = data.removesuffix(',')
+        with open(filename, 'w') as file:
+            file.write(data)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load a csv from file and convert them to the given object """
+        try:
+            index = 0
+            list_s = []
+            filename = f'{cls.__name__}.csv'
+            with open(filename, 'r') as file:
+                data = file.read()
+                n = ' '.join(data.split(',')).rstrip().split(' ')
+                if cls.__name__ == "Square":
+                    len_s = len(n) / 4
+                    s = {}
+                    while len_s:
+                        s['id'] = int(n[index])
+                        s['size'] = int(n[index+1])
+                        s['x'] = int(n[index+2])
+                        s['y'] = int(n[index+3])
+                        index += 4
+                        list_s.append(cls.create(**s))
+                        len_s -= 1
+                    return list_s
+                len_s = len(n) // 5
+                s = {}
+                index = 0
+                while len_s > 0:
+                    s['id'] = int(n[index])
+                    s['width'] = int(n[index+1])
+                    s['height'] = int(n[index+2])
+                    s['x'] = int(n[index+3])
+                    s['y'] = int(n[index+4])
+                    list_s.append(cls.create(**s))
+                    index += 5
+                    len_s -= 1
+                return list_s
+        except Exception as e:
+            return []
