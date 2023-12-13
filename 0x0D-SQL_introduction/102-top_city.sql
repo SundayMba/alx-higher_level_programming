@@ -3,9 +3,6 @@
 -- specify database to use
 USE hbtn_0c_0
 
--- import dump file
-source temperatures.sql
-
 -- perform operation
 SELECT city, AVG(value) AS avg_temp
 FROM temperatures
