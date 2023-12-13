@@ -1,4 +1,8 @@
 -- Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0)
+
+-- specify database to use
+USE hbtn_0c_0
+
 -- import dump file
 source temperatures.sql
 
