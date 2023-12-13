@@ -1,11 +1,6 @@
 -- Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0)
---specify database to work with
-USE hbtn_0c_0;
+-- specify database to work with
 
--- import dump file
-source temperatures.sql;
-
--- perform operation
 SELECT city, AVG(value) AS avg_temp
 FROM temperatures
 GROUP BY city
