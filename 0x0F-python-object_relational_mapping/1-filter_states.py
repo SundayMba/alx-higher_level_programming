@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    module for state model selection
+    module for state model filteration
 """
 import MySQLdb
 import sys
