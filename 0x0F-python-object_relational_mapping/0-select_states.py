@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+"""
+    module for state model selection
+"""
 
 if __name__ == '__main__':
     # connection parameters
