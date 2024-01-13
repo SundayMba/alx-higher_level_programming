@@ -20,7 +20,6 @@ if __name__ == '__main__':
     pattern = re.compile(r'^[a-zA-Z]+', re.I)
     matches = pattern.findall(text)
     search = matches[0]
-    print(search)
     # database connection
     conn = MySQLdb.connect(
         host=host,
@@ -31,7 +30,8 @@ if __name__ == '__main__':
         )
     # grab the cursor to access the database
     cursor = conn.cursor()
-    query = 'SELECT * FROM `states` WHERE states.name=={}'.format(search)
+    query = "SELECT * FROM `states` WHERE states.name = '{}' \
+    ORDER BY states.id".format(search)
 
     # query executation
     cursor.execute(query)

@@ -25,7 +25,8 @@ if __name__ == '__main__':
         )
     # grab the cursor to access the database
     cursor = conn.cursor()
-    query = "SELECT * FROM `states` WHERE BINARY `name` = '{}'".format(search)
+    query = "SELECT * FROM states WHERE BINARY name = '{}' \
+    ORDER BY states.id".format(search)
 
     # query executation
     cursor.execute(query)
