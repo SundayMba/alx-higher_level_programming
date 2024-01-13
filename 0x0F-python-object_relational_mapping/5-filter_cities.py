@@ -34,10 +34,11 @@ if __name__ == '__main__':
 
     # access the fetched data
     rows = cursor.fetchall()
-
+    names = []
     # DISPLAY RESULT
-    for row in rows:
-        print(row)
+    for name in rows:
+        names.append(name[0])
+    print(', '.join(names))
 
     cursor.close()
     conn.close()
