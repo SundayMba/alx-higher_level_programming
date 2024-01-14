@@ -19,6 +19,5 @@ if __name__ == '__main__':
     session = Session()
 
     # using the session, communicate with the database
-    states = session.query(State).order_by(State.id)
-    for state in states:
+    for state in session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
