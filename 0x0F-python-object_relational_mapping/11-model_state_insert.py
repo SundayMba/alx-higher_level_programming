@@ -22,5 +22,5 @@ if __name__ == '__main__':
     louisiana = State(name='louisiana')
     session.add(louisiana)
     session.commit()
-    state = session.query(State).filter(State.name.like('louisiana'))
+    state = session.query(State).filter(State.name.like('louisiana')).first()
     print(state.id)
