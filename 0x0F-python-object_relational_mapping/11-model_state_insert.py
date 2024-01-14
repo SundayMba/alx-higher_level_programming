@@ -19,8 +19,7 @@ if __name__ == '__main__':
     session = Session()
 
     # using the session, communicate with the database
-    louisiana = State(name='louisiana')
+    louisiana = State(name='Louisiana')
     session.add(louisiana)
     session.commit()
-    state = session.query(State).filter(State.name.like('louisiana')).first()
-    print(state.id)
+    print(louisiana.id)
