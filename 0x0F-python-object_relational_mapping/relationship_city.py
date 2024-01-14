@@ -3,9 +3,10 @@
 """
     module that models city object
 """
-from model_state import Base
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Integer, Column, String, ForeignKey
 
+Base = declarative_base()
 
 class City(Base):
     """
