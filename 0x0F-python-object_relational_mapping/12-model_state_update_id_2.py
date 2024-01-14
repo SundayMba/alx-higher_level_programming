@@ -19,7 +19,6 @@ if __name__ == '__main__':
     session = Session()
 
     # using the session, communicate with the database
-    louisiana = State(name='Louisiana')
-    session.add(louisiana)
-    session.commit()
-    print(louisiana.id)
+    new_name = 'New Mexico'
+    state = session.query(State).filter_by(id=2).first()
+    print(state, state.name, state.id)
