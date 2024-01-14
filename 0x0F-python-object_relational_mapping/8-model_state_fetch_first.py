@@ -19,5 +19,8 @@ if __name__ == '__main__':
     session = Session()
 
     # using the session, communicate with the database
-    for state in session.query(State).order_by(State.id):
+    state = session.query(State).order_by(State.id).first()
+    if state is None:
+        print('Nothing')
+    else:
         print("{}: {}".format(state.id, state.name))
