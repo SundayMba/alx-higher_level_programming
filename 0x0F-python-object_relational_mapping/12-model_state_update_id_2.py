@@ -21,4 +21,6 @@ if __name__ == '__main__':
     # using the session, communicate with the database
     new_name = 'New Mexico'
     state = session.query(State).filter_by(id=2).first()
-    print(state, state.name, state.id)
+    if state:
+        state.name = new_name
+    session.commit()
