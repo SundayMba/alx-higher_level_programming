@@ -9,6 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from relationship_city import City, Base
 
+
 class State(Base):
     """
         class model for state
