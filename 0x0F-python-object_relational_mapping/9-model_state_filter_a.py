@@ -20,6 +20,6 @@ if __name__ == '__main__':
 
     # using the session, communicate with the database
     states = session.query(State).order_by(State.id).filter(
-            State.c.name.like('%a%')).all()
+            State.name.like('%a%')).all()
     for state in states:
         print("{}: {}".format(state.id, state.name))
