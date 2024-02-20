@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 const request = require('request');
 const fs = require('fs');
 const url = process.argv[2];
@@ -8,8 +8,6 @@ request.get(url, (error, res, body) => {
   if (error) {
     console.log(error);
   } else {
-    fs.writeFile(file, body, 'utf-8', (error) => {
-      console.log(error);
-    });
+    fs.writeFile(file, body, 'utf8', () => {});
   }
 });
