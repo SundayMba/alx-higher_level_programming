@@ -1,10 +1,3 @@
-$(document).ready(function () {
-  $('DIV#toggle_header').click(function () {
-    const header = $('header');
-    if (header.hasClass('red')) {
-      header.removeClass('red').addClass('green');
-    } else {
-      header.removeClass('green').addClass('red');
-    }
-  });
+$('DIV#toggle_header').click(function () {
+  $('HEADER').toggleClass('green red');
 });
